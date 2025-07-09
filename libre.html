@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libre Seat  - Silla Inteligente para Espacios de Trabajo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4e73df;
+            --secondary-color: #2e59d9;
+            --dark-color: #2c3e50;
+            --light-color: #f8f9fc;
+            --accent-color: #1cc88a;
+        }
+        
+        body {
+            font-family: 'Nunito', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        }
+        
+        .device-mockup {
+            position: relative;
+            width: 100%;
+            padding-bottom: 200%;
+        }
+        
+        .device-mockup img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+        }
+        
+        .app-badge {
+            height: 60px;
+            margin: 10px;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .social-icon {
+            font-size: 1.5rem;
+            color: white;
+            margin: 0 10px;
+            transition: all 0.3s;
+        }
+        
+        .social-icon:hover {
+            color: #ddd;
+            transform: translateY(-3px);
+        }
+        
+        .btn-accent {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+        }
+        
+        .btn-accent:hover {
+            background-color: #17a673;
+            color: white;
+        }
+        
+        .testimonial-card {
+            border-left: 5px solid var(--primary-color);
+        }
+        
+        .pricing-card {
+            transition: all 0.3s;
+            border: none;
+            box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0.5rem 2rem 0 rgba(58, 59, 69, 0.2);
+        }
+        
+        .highlighted-price {
+            background-color: var(--light-color);
+            border-radius: 0.35rem;
+            padding: 1rem;
+            position: relative;
+        }
+        
+        .highlighted-price::after {
+            content: "RECOMENDADO";
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: var(--accent-color);
+            color: white;
+            padding: 2px 10px;
+            font-size: 0.7rem;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-5">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-chair me-2"></i>Libre Seat
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#features">Características</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing">Precios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                </ul>
+                <a href="#download" class="btn btn-accent ms-lg-3">Descargar App</a>
+            </div>
+        </div>
+    </nav>
+
+   <!-- Header -->
+<header class="gradient-bg text-white">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center justify-content-center">
+            <div class="col-lg-7 col-xl-6 col-xxl-6">
+                <div class="my-5 text-center text-xl-start d-flex align-items-center">
+                    <div>
+                        <h1 class="display-5 fw-bold mb-3">Revoluciona tu espacio de trabajo con Libre Seat</h1>
+                        <p class="lead fw-normal mb-4">La primera silla inteligente que se adapta a tus necesidades de confort y productividad, con control total desde tu smartphone.</p>
+                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                            <a class="btn btn-light btn-lg px-4 me-sm-3" href="#pricing">
+                                <i class="fas fa-tags me-2"></i>Ver planes
+                            </a>
+                            <a class="btn btn-outline-light btn-lg px-4" href="#download">
+                                <i class="fas fa-mobile-alt me-2"></i>Descargar App
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-5 col-xxl-6 d-none d-xl-flex justify-content-center">
+                <div style="position:relative;display:inline-block;width:225px;height:487px;">
+                    <video src="demo-screen.mp4" autoplay loop muted playsinline
+                        style="
+                            position:absolute;
+                            top:28px;
+                            left:10px;
+                            width:204px;
+                            height:443px;
+                            border-radius:24px;
+                            object-fit:cover;
+                            z-index:1;
+                            background:#000;
+                            box-shadow: 0 0 0 1.2px #222;
+                        ">
+                    </video>
+                    <img src="iphone-x-mockup.png" alt="Mockup de iPhone" style="width:225px;height:487px;display:block;position:relative;z-index:2;pointer-events:none;">
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container px-5 my-5">
+            <div class="row gx-5">
+                <div class="col-lg-12 mb-5 mb-lg-0">
+                    <h2 class="text-center mb-5">Características innovadoras</h2>
+                    <p class="text-center text-muted lead mb-5">Diseñada para maximizar tu comodidad y productividad en cualquier espacio de trabajo</p>
+                </div>
+            </div>
+            <div class="row gx-5">
+                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                    <div class="text-center">
+                        <i class="fas fa-bell feature-icon"></i>
+                        <h3>Reservas inteligentes</h3>
+                        <p class="mb-0">Reserva tu silla favorita con anticipación o encuentra disponibilidad inmediata en tiempo real.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                    <div class="text-center">
+                        <i class="fas fa-cogs feature-icon"></i>
+                        <h3>Ajustes personalizados</h3>
+                        <p class="mb-0">Guarda tus configuraciones preferidas de altura, inclinación y soporte lumbar.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+                    <div class="text-center">
+                        <i class="fas fa-heartbeat feature-icon"></i>
+                        <h3>Monitoreo postural</h3>
+                        <p class="mb-0">Sensores avanzados te alertan cuando necesitas ajustar tu postura para mejor salud.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center">
+                        <i class="fas fa-chart-pie feature-icon"></i>
+                        <h3>Analíticas de uso</h3>
+                        <p class="mb-0">Obtén reportes detallados de tus patrones de trabajo y recomendaciones personalizadas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container px-5 my-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6">
+                    <img src="trabajo.jpg" alt="Equipo Seat Libre" class="img-fluid rounded">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bolder mb-4">Nuestra historia</h2>
+                    <p class="lead mb-4">En Seat Libre, creemos que el confort y la tecnología deben trabajar juntos para transformar tus horas de trabajo.</p>
+                    <p>Fundada en 2020 por un equipo de ingenieros y especialistas en ergonomía, nuestra misión es crear soluciones inteligentes para los espacios de trabajo modernos. Después de años de investigación y desarrollo, hemos creado la primera silla inteligente que realmente entiende y se adapta a tus necesidades.</p>
+                    <p>Con más de 10,000 unidades vendidas y presencia en 15 países, seguimos innovando para ofrecerte la mejor experiencia de trabajo sentado.</p>
+                    <div class="mt-4">
+                        <a href="#contact" class="btn btn-primary btn-lg px-4 me-2">
+                            <i class="fas fa-envelope me-2"></i>Contáctanos
+                        </a>
+                        <a href="#testimonials" class="btn btn-outline-primary btn-lg px-4">
+                            <i class="fas fa-users me-2"></i>Ver testimonios
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Showcase -->
+    <section class="py-5">
+        <div class="container px-5 my-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                    <img src="silla.jpg" alt="Silla inteligente Seat Libre" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="mb-5">
+                        <h2 class="fw-bolder">Tecnología de vanguardia</h2>
+                        <p class="lead fw-normal text-muted mb-0">Nuestra silla inteligente incorpora los últimos avances en ergonomía y conectividad.</p>
+                    </div>
+                    <div class="row gx-5">
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-microchip text-primary me-3"></i>
+                                <div>
+                                    <h5 class="mb-0">Sensores inteligentes</h5>
+                                    <small class="text-muted">Monitorean postura y presión</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-bluetooth text-primary me-3"></i>
+                                <div>
+                                    <h5 class="mb-0">Conectividad Wi-fi</h5>
+                                    <small class="text-muted">Compatibilidad total con tu dispositivo</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-battery-full text-primary me-3"></i>
+                                <div>
+                                    <h5 class="mb-0">Batería de larga duración</h5>
+                                    <small class="text-muted">Hasta 6 meses con una sola carga</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-cloud text-primary me-3"></i>
+                                <div>
+                                    <h5 class="mb-0">Sincronización en la nube</h5>
+                                    <small class="text-muted">Guarda tus preferencias en todos tus dispositivos</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-5 bg-light">
+        <div class="container px-5 my-5">
+            <div class="text-center">
+                <h2 class="fw-bolder">Planes de suscripción</h2>
+                <p class="lead text-muted mb-5">Elige el plan que mejor se adapte a tus necesidades</p>
+            </div>
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 pricing-card">
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="card-title">Básico</h5>
+                                <h6 class="card-price my-3">$29<span class="text-muted">/mes</span></h6>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Control básico de ajustes</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Reservas de sillas</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Notificaciones de disponibilidad</li>
+                                    <li class="mb-2 text-muted"><i class="fas fa-times me-2"></i>Analíticas avanzadas</li>
+                                    <li class="mb-2 text-muted"><i class="fas fa-times me-2"></i>Monitoreo postural</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <div class="text-center">
+                                <a class="btn btn-outline-primary" href="#contact">Seleccionar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 pricing-card">
+                        <div class="highlighted-price">
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="card-title">Premium</h5>
+                                    <h6 class="card-price my-3">$49<span class="text-muted">/mes</span></h6>
+                                    <ul class="list-unstyled mb-4">
+                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Todas las funciones Básico</li>
+                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Monitoreo postural avanzado</li>
+                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Analíticas de productividad</li>
+                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Perfiles múltiples</li>
+                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Soporte prioritario</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <div class="text-center">
+                                <a class="btn btn-accent" href="#contact">Seleccionar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 pricing-card">
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="card-title">Empresas</h5>
+                                <h6 class="card-price my-3">$99<span class="text-muted">/mes</span></h6>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Todas las funciones Premium</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Gestión de flotas</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Dashboard administrativo</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>API de integración</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Soporte 24/7</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <div class="text-center">
+                                <a class="btn btn-outline-primary" href="#contact">Contactar ventas</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="text-muted">¿Necesitas un plan personalizado? <a href="#contact">Contáctanos</a> para cotizaciones especiales.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5">
+        <div class="container px-5 my-5">
+            <div class="text-center">
+                <h2 class="fw-bolder">Lo que dicen nuestros clientes</h2>
+                <p class="lead text-muted mb-5">Empresas y profesionales que ya disfrutan de Libre Seat </p>
+            </div>
+            <div class="row gx-5">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex mb-4">
+                                <img src="https://via.placeholder.com/50" alt="Cliente 1" class="rounded-circle me-3" width="50" height="50">
+                                <div>
+                                    <h5 class="mb-0">María González</h5>
+                                    <small class="text-muted">CEO, TechSolutions</small>
+                                </div>
+                            </div>
+                            <p class="card-text">"Desde que implementamos Libre Seat en nuestras oficinas, la satisfacción de nuestros empleados ha aumentado un 30%. La capacidad de reservar sus sillas favoritas y personalizar los ajustes ha sido un cambio radical."</p>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="card h-100 shadow-sm testimonial-card">
+                        <div class="card-body p-4">
+                            <div class="d-flex mb-4">
+                                <img src="https://via.placeholder.com/50" alt="Cliente 2" class="rounded-circle me-3" width="50" height="50">
+                                <div>
+                                    <h5 class="mb-0">Carlos Mendoza</h5>
+                                    <small class="text-muted">Diseñador UX Freelance</small>
+                                </div>
+                            </div>
+                            <p class="card-text">"Como freelancer que trabaja en diferentes espacios de coworking, Libre Seat  ha sido una revelación. Puedo llevar mis configuraciones a cualquier lugar y la app me ayuda a encontrar sillas disponibles rápidamente."</p>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex mb-4">
+                                <img src="https://via.placeholder.com/50" alt="Cliente 3" class="rounded-circle me-3" width="50" height="50">
+                                <div>
+                                    <h5 class="mb-0">Laura Jiménez</h5>
+                                    <small class="text-muted">Directora de RRHH, Innovacorp</small>
+                                </div>
+                            </div>
+                            <p class="card-text">"Las analíticas de uso nos han permitido optimizar nuestros espacios de trabajo y reducir las quejas por dolores de espalda en un 45%. La inversión en Libre Seat Libre se ha pagado sola en productividad ganada."</p>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="py-5 gradient-bg text-white">
+        <div class="container px-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="display-4 fw-bold mb-4">¡Empieza hoy mismo!</h2>
+                    <p class="lead mb-5">Descarga la app y descubre cómo Libre Seat puede transformar tu experiencia de trabajo.</p>
+                    <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
+                        <a href="#" class="me-lg-3 mb-4 mb-lg-0">
+                            <img class="app-badge" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/1200px-Google_Play_Store_badge_EN.svg.png" alt="Disponible en Google Play">
+                        </a>
+                        <a href="#">
+                            <img class="app-badge" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/1200px-Download_on_the_App_Store_Badge.svg.png" alt="Descargar en App Store">
+                        </a>
+                    </div>
+                    <div class="mt-4">
+                        <small class="text-white-50">Disponible también para escritorio</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container px-5 my-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-8 col-xl-6">
+                    <div class="text-center">
+                        <h2 class="fw-bolder">Contáctanos</h2>
+                        <p class="lead text-muted mb-5">¿Tienes preguntas? Escríbenos y nuestro equipo te responderá pronto.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-7">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">Nombre completo</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="subject" class="form-label">Asunto</label>
+                                <input type="text" class="form-control" id="subject" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="message" rows="3" required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary btn-lg">Enviar mensaje</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto">
+                    <div class="small m-0 text-white">Copyright &copy; Libre Seat  2023</div>
+                </div>
+                <div class="col-auto">
+                    <div class="d-flex">
+                        <a class="social-icon" href="https://www.facebook.com/share/1E7P6tmJJW/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-icon" href="https://www.tiktok.com/@kike.fuifui?_t=ZS-8xsw6sH17LE&_r=1" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="d-flex flex-wrap justify-content-center">
+                        <a href="#" class="text-white-50 mx-2 small">Términos de servicio</a>
+                        <a href="#" class="text-white-50 mx-2 small">Política de privacidad</a>
+                        <a href="#" class="text-white-50 mx-2 small">FAQ</a>
+                        <a href="#" class="text-white-50 mx-2 small">Soporte</a>
+                        <a href="#" class="text-white-50 mx-2 small">Blog</a>
+                        <a href="#" class="text-white-50 mx-2 small">Carreras</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
